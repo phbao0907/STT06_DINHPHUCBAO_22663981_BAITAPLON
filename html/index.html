@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuBao SHOP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<script>
+    // Danh sách sản phẩm để tìm kiếm
+    const products = [{
+        name: "Bao cát",
+        link: "../html/baocat.html"
+    }, {
+        name: "Con lăn",
+        link: "../html/conlanconlan.html"
+    }, {
+        name: "Cơ bụng",
+        link: "../html/cobung.html"
+    }, {
+        name: "Dây nhảy",
+        link: "../html/daynhay.html"
+    }, {
+        name: "Gậy lò xo",
+        link: "../html/gayloxo.html"
+    }, {
+        name: "Lăn tập bụng",
+        link: "../html/lantapbung.html"
+    }, {
+        name: "Xà đơn",
+        link: "../html/xadon.html"
+    }, {
+        name: "Xe đạp thể dục",
+        link: "../html/xedaptheduc.html"
+    }, {
+        name: "Kẹp bóp tay",
+        link: "../html/kepboptay.html"
+    }, {
+        name: "Tạ tròn",
+        link: "../html/tatron.html"
+    }, {
+        name: "Dây kháng lực",
+        link: "../html/daykhangluc.html"
+    }, {
+        name: "Dụng cụ plank",
+        link: "../html/plank.html"
+    }];
+
+    function searchProduct() {
+        const searchTerm = document.querySelector('.input-group input').value.toLowerCase();
+        const product = products.find(p => p.name.toLowerCase().includes(searchTerm));
+
+        if (product) {
+            // Chuyển hướng đến trang chi tiết sản phẩm
+            window.location.href = product.link;
+        } else {
+            alert("Sản phẩm không tìm thấy!");
+        }
+    }
+</script>
+
+<body>
+    <header></header>
+    <nav>
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a href="../html/index.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+                <a href="../html/vechungtoi.html">VỀ CHÚNG TÔI</a>
+            </li>
+            <li class="nav-item">
+                <a href="../html/lienhe.html">LIÊN HỆ</a>
+            </li>
+            <li class="nav-item">
+                <div class="cart-icon">
+                    <a href="../html/cart.html">
+                        <p style="font-size: 40px; width: 50px; height: 50px;">&#128722;</p>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="../html/DangNhap.html">
+                    <p style="font-size: 40px; width: 50px; height: 50px;">&#128100;</p>
+                </a>
+            </li>
+            <li>
+                <div class="input-group mb-3" style="width: 350px; padding-top: 13px; padding-right: 20px;">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm">
+                    <button onclick="searchProduct()" class="btn btn-danger" type="button">GO</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../img/bao cát.webp" alt="">
+                <h3>Bao cát</h3>
+                <p>199,000đ</p>
+                <button class="add-to-cart"><a href="../html/baocat.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/con lăn.webp" alt="">
+                <h3>Con lăn</h3>
+                <p>99,000đ</p>
+                <button class="add-to-cart"><a href="../html/conlan.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/cơ bụng.webp" alt="">
+                <h3>Cơ bụng</h3>
+                <p>99,000đ</p>
+                <button class="add-to-cart"><a href="../html/cobung.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/dây kháng lực.png" alt="">
+                <h3>Dây kháng lực</h3>
+                <p>59,000đ</p>
+                <button class="add-to-cart"><a href="../html/daykhangluc.html">XEM CHI TIẾT</a></button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../img/dây nhảy.webp" alt="">
+                <h3>Dây nhảy</h3>
+                <p>45.000đ</p>
+                <button class="add-to-cart"><a href="../html/daynhay.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/dụng cụ plank.png" alt="">
+                <h3>Dụng cụ Plank</h3>
+                <p>119,000</p>
+                <button class="add-to-cart"><a href="../html/plank.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/gậy lò xo.webp" alt="">
+                <h3>Gậy lò xo</h3>
+                <p>75,000đ</p>
+                <button class="add-to-cart"><a href="../html/gayloxo.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/kẹp bóp tay.png" alt="">
+                <h3>Kẹp bóp tay</h3>
+                <p>59,000đ</p>
+                <button class="add-to-cart"><a href="../html/kepboptay.html">XEM CHI TIẾT</a></button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../img/lăn tập bụng.webp" alt="">
+                <h3>Lăn tập bụng</h3>
+                <p>179.000đ</p>
+                <button class="add-to-cart"><a href="../html/lantapbung.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/tạ tròn.png" alt="">
+                <h3>Tạ tròn</h3>
+                <p>39,000đ</p>
+                <button class="add-to-cart"><a href="../html/tatron.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/xà đơn.webp" alt="">
+                <h3>Xà đơn</h3>
+                <p>399,000đ</p>
+                <button class="add-to-cart"><a href="../html/xadon.html">XEM CHI TIẾT</a></button>
+            </div>
+            <div class="product-card">
+                <img src="../img/xe đạp.webp" alt="">
+                <h3>Xe đạp thể dục</h3>
+                <p>499,000đ</p>
+                <button class="add-to-cart"><a href="../html/xedaptheduc.html">XEM CHI TIẾT</a></button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-contact">
+                <p><strong>Hotline Support</strong><br>0765.638.196</p>
+                <p><strong>Email Us</strong><br><a href="mailto:fubao@gmail.com">fubao@gmail.com</a></p>
+            </div>
+            <div class="footer-social">
+                <p><strong>Follow Us</strong></p>
+                <a href="https://www.youtube.com/"><img src="../img/fb.jpg" alt="Facebook" /></a>
+                <a href="https://www.facebook.com/"><img src="../img/yt.png" alt="YouTube" /></a>
+                <a href="https://www.instagram.com/"><img src="../img/ig.png" alt="Instagram" /></a>
+            </div>
+            <div class="footer-payment">
+                <a href="#"><img src="../img/momo.png" alt="Momo" /></a>
+                <a href="#"><img src="../img/mcard.png" alt="MasterCard" /></a>
+                <a href="#"><img src="../img/visa.png" alt="Visa" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                FuBao SHOP, 16 Nguyễn Văn Bảo, Phường 5, Quận Gò vấp, TP. Hồ Chí Minh.<br> Điện thoại: 0909 789 456. Email: info@fubao.com.vn<br> Liên hệ hợp tác, phát triển sản phẩm: fubaoshop@gmail.com
+            </p>
+            <p>Copyright © 2024 FuBao SHOP</p>
+        </div>
+    </footer>
+</body>
+
+</html>
